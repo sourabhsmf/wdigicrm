@@ -1,0 +1,1 @@
+web: gunicorn wdigicrm.wsgi --log-file -
