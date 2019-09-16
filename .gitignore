@@ -108,3 +108,6 @@ venv.bak/
 
 #migartions
 *migrations/
+
+#static file
+/wdigicrm/static/
