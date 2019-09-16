@@ -27,7 +27,10 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'ka*p5g_18ztqj7@z^i+x0#sivsu653
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+if len(db_from_env):
+    ALLOWED_HOSTS = ['wdigicrm.herokuapp.com']
+else:
+    ALLOWED_HOSTS = []
 
 
 # Application definition
