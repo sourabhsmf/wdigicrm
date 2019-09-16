@@ -23,8 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'ka*p5g_18ztqj7@z^i+x0#sivsu6539e!ri%fhe!+og83+_3hy'
-
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'ka*p5g_18ztqj7@z^i+x0#sivsu6539e!ri%fhe!+og83+_3hy')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -133,3 +132,12 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
 }
+SECURE_BROWSER_XSS_FILTER = True
+
+SESSION_COOKIE_SECURE = True
+
+CSRF_COOKIE_SECURE = True
+
+X_FRAME_OPTIONS = 'DENY'
+
+SECURE_CONTENT_TYPE_NOSNIFF = True
