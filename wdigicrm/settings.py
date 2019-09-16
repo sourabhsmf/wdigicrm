@@ -28,8 +28,10 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'ka*p5g_18ztqj7@z^i+x0#sivsu653
 DEBUG = True
 
 if len(db_from_env):
+    #PROD
     ALLOWED_HOSTS = ['wdigicrm.herokuapp.com']
 else:
+    #DEV
     ALLOWED_HOSTS = []
 
 
